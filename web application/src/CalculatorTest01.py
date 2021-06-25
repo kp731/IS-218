@@ -32,5 +32,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.Square(8, 2), 64)
         self.assertEqual(self.calculator.result, 64)
 
+    def test_SquareRoot_method_calculator(self):
+        self.assertEqual(self.calculator.SquareRoot(36), 6)
+        self.assertEqual(self.calculator.result, 6)
+
 if __name__ == '__main__':
     unittest.main()
