@@ -9,7 +9,7 @@ def addition(a, b):
 def subraction(a, b):
     a = int(a)
     b = int(b)
-    c = a - b
+    c = b - a
     return c
 
 
@@ -19,17 +19,16 @@ def Multiplication(a, b):
 
 
 def Division(a, b):
-    c = float(a)/float(b)
-    return c
+    c = float(b)/float(a)
+    return round(c, 9)
 
 
-def Square(a, b):
-    c = float(a)**float(b)
-    return c
+def Square(a):
+    return float(a) * float(a)
 
 
 def SquareRoot(a):
-    return round(math.sqrt(float(a)), 9)
+    return round(math.sqrt(float(a)), 8)
 
 
 class Calculator:
