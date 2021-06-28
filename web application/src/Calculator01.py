@@ -2,27 +2,34 @@ import math
 
 
 def addition(a, b):
-    return a + b
+    c = int(a) + int(b)
+    return c
 
 
 def subraction(a, b):
-    return a - b
+    a = int(a)
+    b = int(b)
+    c = a - b
+    return c
 
 
 def Multiplication(a, b):
-    return a * b
+    c = float(a) * float(b)
+    return c
 
 
 def Division(a, b):
-    return a / b
+    c = float(a)/float(b)
+    return c
 
 
 def Square(a, b):
-    return a ** b
+    c = float(a)**float(b)
+    return c
 
 
 def SquareRoot(a):
-    return math.sqrt(a)
+    return round(math.sqrt(float(a)), 9)
 
 
 class Calculator:
@@ -47,10 +54,10 @@ class Calculator:
         self.result = Division(a, b)
         return self.result
 
-    def Square(self, a, b):
-        self.result = Square(a, b)
+    def Square(self, a):
+        self.result = Square(a)
         return self.result
 
     def SquareRoot(self, a):
-        self.result = SquareRoot(a)
+        self.result = SquareRoot(float(a))
         return self.result
