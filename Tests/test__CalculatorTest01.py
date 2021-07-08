@@ -1,14 +1,13 @@
 import unittest
-from Calculator01 import Calculator
-from CsvReader import CsvReader
+from Calculator.Calculator.Calculator01 import Calculator
+from CsvReader.CsvReader import CsvReader
 from pprint import pprint
-from pathlib import Path
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.calculator = Calculator()
-        self.test_data = CsvReader('/src/TestData/Unit Test Addition.csv')
+        self.test_data = CsvReader('/Tests/Data/Unit Test Addition.csv')
         CsvReader.clear_data(self.test_data)
 
     def test_instantiate_calculator(self):
@@ -18,7 +17,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 0)
 
     def test_add_method_calculator(self):
-        test_data = CsvReader('/src/TestData/Unit Test Addition.csv').data
+        test_data = CsvReader('/Tests/Data/Unit Test Addition.csv').data
         for row in test_data:
             Result = float(row['Result'])
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), Result)
@@ -26,7 +25,7 @@ class MyTestCase(unittest.TestCase):
             pprint(row)
 
     def test_subtraction_method_calculator(self):
-        test_data = CsvReader('/src/TestData/Unit Test Subtraction.csv').data
+        test_data = CsvReader('/Tests/Data/Unit Test Subtraction.csv').data
         for row in test_data:
             Result = float(row['Result'])
             self.assertEqual(self.calculator.subtract(int(row['Value 1']), int(row['Value 2'])), Result)
@@ -37,7 +36,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_Multiplication_method_calculator(self):
         CsvReader.clear_data(self.test_data)
-        test_data = CsvReader('/src/TestData/Unit Test Multiplication.csv').data
+        test_data = CsvReader('/Tests/Data/Unit Test Multiplication.csv').data
         for row in test_data:
             Result = float(row['Result'])
             self.assertEqual(self.calculator.Multiplication(row['Value 1'], row['Value 2']), Result)
@@ -48,7 +47,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_Division_method_calculator(self):
         CsvReader.clear_data(self.test_data)
-        test_data = CsvReader('/src/TestData/Unit Test Division.csv').data
+        test_data = CsvReader('/Tests/Data/Unit Test Division.csv').data
         for row in test_data:
             Result = round(float(row['Result']), 9)
             self.assertEqual(self.calculator.Division(row['Value 1'], row['Value 2']), Result)
@@ -60,7 +59,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_Square_method_calculator(self):
         CsvReader.clear_data(self.test_data)
-        test_data = CsvReader('/src/TestData/Unit Test Square.csv').data
+        test_data = CsvReader('/Tests/Data/Unit Test Square.csv').data
         for row in test_data:
             Result = float(row['Result'])
             self.assertEqual(self.calculator.Square(float(row['Value 1'])), float(row['Result']))
@@ -71,7 +70,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_SquareRoot_method_calculator(self):
         CsvReader.clear_data(self.test_data)
-        test_data = CsvReader('/src/TestData/Unit Test Square Root.csv').data
+        test_data = CsvReader('/Tests/Data/Unit Test Square Root.csv').data
         for row in test_data:
             Result = round(float(row['Result']), 8)
             self.assertEqual(self.calculator.SquareRoot(row['Value 1']), Result)

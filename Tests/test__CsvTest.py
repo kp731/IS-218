@@ -1,13 +1,12 @@
 import unittest
-import sys
-from CsvReader import CsvReader, ClassFactory
-from pprint import pprint
+from CsvReader.CsvReader import CsvReader, ClassFactory
+from pathlib import Path
 
 
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/src/TestData/Unit Test Addition.csv')
+        self.csv_reader = CsvReader('/Tests/Data/Unit Test Addition.csv')
 
 
     def test_return_data_as_objects(self):
@@ -21,7 +20,7 @@ class MyTestCase(unittest.TestCase):
 class MyTestCase1(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/src/TestData/Unit Test Subtraction.csv')
+        self.csv_reader = CsvReader('/Tests/Data/Unit Test Subtraction.csv')
 
 
     def test_return_data_as_objects(self):
@@ -36,7 +35,7 @@ class MyTestCase1(unittest.TestCase):
 class MyTestCase2(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/src/TestData/Unit Test Multiplication.csv')
+        self.csv_reader = CsvReader('/Tests/Data/Unit Test Multiplication.csv')
 
 
     def test_return_data_as_objects(self):
@@ -50,7 +49,7 @@ class MyTestCase2(unittest.TestCase):
 class MyTestCase3(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/src/TestData/Unit Test Division.csv')
+        self.csv_reader = CsvReader('/Tests/Data/Unit Test Division.csv')
 
 
     def test_return_data_as_objects(self):
@@ -64,7 +63,7 @@ class MyTestCase3(unittest.TestCase):
 class MyTestCase4(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/src/TestData/Unit Test Square.csv')
+        self.csv_reader = CsvReader('/Tests/Data/Unit Test Square.csv')
 
 
     def test_return_data_as_objects(self):
@@ -78,7 +77,7 @@ class MyTestCase4(unittest.TestCase):
 class MyTestCase4(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('/src/TestData/Unit Test Square Root.csv')
+        self.csv_reader = CsvReader('/Tests/Data/Unit Test Square Root.csv')
 
 
     def test_return_data_as_objects(self):

@@ -1,35 +1,9 @@
-import math
-
-
-def addition(a, b):
-    c = int(a) + int(b)
-    return c
-
-
-def subraction(a, b):
-    a = int(a)
-    b = int(b)
-    c = b - a
-    return c
-
-
-def Multiplication(a, b):
-    c = float(a) * float(b)
-    return c
-
-
-def Division(a, b):
-    c = float(b)/float(a)
-    return round(c, 9)
-
-
-def Square(a):
-    return float(a) * float(a)
-
-
-def SquareRoot(a):
-    return round(math.sqrt(float(a)), 8)
-
+from Calculator.Calculator.Addition import addition
+from Calculator.Calculator.Subtraction import subraction
+from Calculator.Calculator.Mulitiplication import Multiplication
+from Calculator.Calculator.Division import Division
+from Calculator.Calculator.Squaring import Square
+from Calculator.Calculator.SquarerRoot import SquareRoot
 
 class Calculator:
     result = 0
